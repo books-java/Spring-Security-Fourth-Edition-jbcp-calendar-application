@@ -1,10 +1,14 @@
 -- Calendar Users
 insert into calendar_users(id, email, password, first_name, last_name)
-values (0, 'user1@example.com', 'user1', 'User', '1');
+values (0, 'user1@example.com', '{noop}user1', 'User', '1');
 insert into calendar_users(id, email, password, first_name, last_name)
-values (1, 'admin1@example.com', 'admin1', 'Admin', '1');
+values (1, 'admin1@example.com', '{noop}admin1', 'Admin', '1');
 insert into calendar_users(id, email, password, first_name, last_name)
-values (2, 'user2@example.com', 'user2', 'User', '2');
+values (2, 'user2@example.com', '{noop}user2', 'User', '2');
+insert into calendar_users(id, email, password, first_name, last_name)
+values (3, 'admin', '{noop}admin', 'Admin', '3');
+insert into calendar_users(id, email, password, first_name, last_name)
+values (4, 'user', '{noop}password', 'User', '4');
 
 -- Calendar Events
 insert into events (id, dateWhen, summary, description, owner, attendee)

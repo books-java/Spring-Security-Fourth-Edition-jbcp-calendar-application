@@ -26,6 +26,7 @@ public class DefaultCalendarService implements CalendarService {
 	 */
 	private final CalendarUserDao userDao;
 
+
 	/**
 	 * Instantiates a new Default calendar service.
 	 *
@@ -43,81 +44,34 @@ public class DefaultCalendarService implements CalendarService {
 		this.userDao = userDao;
 	}
 
-	/**
-	 * Gets event.
-	 *
-	 * @param eventId the event id
-	 * @return the event
-	 */
 	public Event getEvent(int eventId) {
 		return eventDao.getEvent(eventId);
 	}
 
-	/**
-	 * Create event int.
-	 *
-	 * @param event the event
-	 * @return the int
-	 */
 	public int createEvent(Event event) {
 		return eventDao.createEvent(event);
 	}
 
-	/**
-	 * Find for user list.
-	 *
-	 * @param userId the user id
-	 * @return the list
-	 */
 	public List<Event> findForUser(int userId) {
 		return eventDao.findForUser(userId);
 	}
 
-	/**
-	 * Gets events.
-	 *
-	 * @return the events
-	 */
 	public List<Event> getEvents() {
 		return eventDao.getEvents();
 	}
 
-	/**
-	 * Gets user.
-	 *
-	 * @param id the id
-	 * @return the user
-	 */
 	public CalendarUser getUser(int id) {
 		return userDao.getUser(id);
 	}
 
-	/**
-	 * Find user by email calendar user.
-	 *
-	 * @param email the email
-	 * @return the calendar user
-	 */
 	public CalendarUser findUserByEmail(String email) {
 		return userDao.findUserByEmail(email);
 	}
 
-	/**
-	 * Find users by email list.
-	 *
-	 * @param partialEmail the partial email
-	 * @return the list
-	 */
 	public List<CalendarUser> findUsersByEmail(String partialEmail) {
 		return userDao.findUsersByEmail(partialEmail);
 	}
 
-	/**
-	 * Create user int.
-	 *
-	 * @param user the user
-	 * @return the int
-	 */
 	public int createUser(CalendarUser user) {
 		return userDao.createUser(user);
 	}
